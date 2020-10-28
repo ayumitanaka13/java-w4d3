@@ -1,0 +1,36 @@
+package ca.java.project;
+
+import java.util.ArrayList;
+
+//import ca.java.composition.BankAccount;
+//import ca.java.composition.User;
+
+public class Driver {
+
+	// main method
+	public static void main(String[] args) {
+		//Create BankAccount Objects
+		BankAccount b1 = new BankAccount(1000, 1993, 12);
+		BankAccount b2 = new BankAccount(600, 2015, 3);
+		BankAccount b3 = new BankAccount(4000, 1930, 8);
+		//Create User Object
+		User u1 = new User("Ayumi", "Tanaka", "V36B3H", "123-456-789");
+		//Populate the list of BankAccounts
+		u1.addBankAccount(b1);
+		u1.addBankAccount(b2);
+		u1.addBankAccount(b3);
+		
+		printUserInfo(u1);
+	}
+
+	
+	// print method
+	public static void printUserInfo(User u) {
+		System.out.println("User name : " + u.getFirstName() +
+				" " + u.getLastName() +
+				"\nPostal code : " + u.getPostalCode() +
+				"\nPhone number : " + u.getPhoneNumber() + u.getBankAccounts());
+	}
+	
+}
+

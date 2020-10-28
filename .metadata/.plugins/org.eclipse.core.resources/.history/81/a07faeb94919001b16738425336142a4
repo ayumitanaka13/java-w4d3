@@ -1,0 +1,106 @@
+package ca.java.project;
+
+import java.util.ArrayList;
+
+public class User {
+
+	private String firstName;
+	private String lastName;
+	private String postalCode;
+	private String phoneNumber;
+	private ArrayList<BankAccount> bankAccounts;
+	
+	
+	
+	//CONSTRUCTOR
+	
+	public User(String firstName, String lastName, String postalCode, String phoneNumber) {
+		setFirstName(firstName);
+		setLastName(lastName);
+		setPostalCode(postalCode);
+		setPhoneNumber(phoneNumber);
+		this.bankAccounts = new ArrayList<BankAccount>();
+	}
+	
+	
+	
+	/*
+	 * Populate ArrayList of BankAccount
+	 */
+	public void addBankAccount(BankAccount b) {
+		this.bankAccounts.add(b);
+	}
+	
+	
+	
+	//GETTER
+	
+	/*
+	 * @ return firstName
+	 */
+	public String getFirstName() {
+		return firstName;
+	}
+	/*
+	 * @ return lastName
+	 */
+	public String getLastName() {
+		return lastName;
+	}
+	/*
+	 * @ return postalCode
+	 */
+	public String getPostalCode() {
+		return postalCode;
+	}
+	/*
+	 * @ return postalCode
+	 */
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	/*
+	 * @ return ArrayList<BankAccount> BankAccounts
+	 */
+	public ArrayList<BankAccount> getBankAccounts() {
+		return bankAccounts;
+	}
+	
+	
+	
+	// SETTER
+	
+	/*
+	 * @ param firstName
+	 */
+	public void setFirstName(String firstName) {
+		if (!firstName.isEmpty() && !firstName.equalsIgnoreCase(null)) {
+			this.firstName = firstName;
+		}
+	}
+	/*
+	 * @ param lastName
+	 */
+	public void setLastName(String lastName) {
+		if (!lastName.isEmpty() && !lastName.equalsIgnoreCase(null)) {
+			this.lastName = lastName;
+		} 
+	}
+	/*
+	 * @ param postalCode
+	 */
+	public void setPostalCode(String postalCode) {
+		if (!postalCode.isEmpty() && !postalCode.equalsIgnoreCase(null)) {
+			this.postalCode = postalCode;
+		} 
+	}
+	/*
+	 * @ param phoneNumber
+	 */
+	public void setPhoneNumber(String phoneNumber) {
+		if (!phoneNumber.isEmpty() && !phoneNumber.equalsIgnoreCase(null)) {
+			this.phoneNumber = phoneNumber;
+		} 
+	}
+}
+

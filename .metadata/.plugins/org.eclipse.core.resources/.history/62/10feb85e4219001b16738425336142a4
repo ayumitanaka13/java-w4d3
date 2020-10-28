@@ -1,0 +1,18 @@
+package ca.java.composition;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		//Create BankAccount Objects
+		BankAccount b1 = new BankAccount(1000, 1993, 12);
+		BankAccount b2 = new BankAccount(600, 2015, 3);
+		BankAccount b3 = new BankAccount(4000, 1930, 8);
+		//Create Course Object
+		Course c1 = new Course("Java", 8);
+		//Populate the list of BankAccounts
+		c1.addBankAccount(b1);
+		c1.addBankAccount(b2);
+		c1.addBankAccount(b3);
+	}
+
+}

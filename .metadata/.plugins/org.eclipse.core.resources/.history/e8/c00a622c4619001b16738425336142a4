@@ -1,0 +1,101 @@
+package ca.java.project;
+
+public class BankAccount {
+	
+	private int accountNumber;
+	private double deposit;
+	private int createdYear;
+	private int createdMonth;
+
+	
+	
+	//CONSTRUCTOR
+	
+	public BankAccount(double deposit, int createdYear, int createdMonth) {
+		setDeposit(deposit); 
+		setCreatedYear(createdYear);
+		setCreatedMonth(createdMonth);
+	}
+	
+
+	
+	//GETTER
+	
+	/*
+	 * @ return accountNumber
+	 */
+	public int getAccountNumber() {
+		return accountNumber;
+	}
+	/*
+	 * @ return deposit
+	 */
+	public double getDeposit() {
+		return deposit;
+	}
+	/*
+	 * @ return createdYear
+	 */
+	public int getCreatedYear() {
+		return createdYear;
+	}
+	/*
+	 * @ return createdYear
+	 */
+	public int getCreatedMonth() {
+		return createdMonth;
+	}
+
+	
+	
+	
+	// SETTER
+	
+//	/*
+//	 * @ param accountNumber
+//	 */
+//	public void setAccountNumber(int accountNumber) {
+//		if (accountNumber > 0) {
+//			this.accountNumber = accountNumber;
+//		} else {
+//			this.accountNumber = 0;
+//		}		
+//	}
+	/*
+	 *  Set accountNumber
+	 */
+	public void setAccountNumber() {	
+		int randomNumber = (int)((Math.random()*9001)+1000);
+		this.accountNumber = randomNumber;
+	}
+	/*
+	 * @ param deposit
+	 */
+	public void setDeposit(double deposit) {
+		if (deposit > 0) {
+			this.deposit = deposit;
+		} else {
+			this.deposit = 0;
+		}	
+	}
+	/*
+	 * @ param createdYear
+	 */
+	public void setCreatedYear(int createdYear) {
+		if (createdYear > 0) {
+			this.createdYear = createdYear;
+		} else {
+			this.createdYear = 0;
+		}		
+	}
+	/*
+	 * @ param createdMonth
+	 */
+	public void setCreatedMonth(int createdMonth) {
+		if (createdMonth > 0 && createdMonth < 13) {
+			this.createdMonth = createdMonth;
+		} else {
+			this.createdMonth = 0;
+		}		
+	}
+}

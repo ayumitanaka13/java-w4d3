@@ -1,0 +1,35 @@
+package ca.java.project;
+
+//import ca.java.composition.BankAccount;
+//import ca.java.composition.User;
+
+public class Driver {
+	
+	public static void printInformation(User u) {
+		System.out.println(u.toString());
+		System.out.println("The Bank Accounts List of "
+				+ u.getFirstName() + u.getLastName());
+		
+		for (BankAccount b : u.getBankAccounts()) {
+			System.out.println(b.toString());
+		}
+	}
+
+	// main method
+	public static void main(String[] args) {
+		//Create BankAccount Objects
+		BankAccount b1 = new BankAccount(1000, 1993, 12);
+		BankAccount b2 = new BankAccount(600.5, 2015, 3);
+		BankAccount b3 = new BankAccount(-100, 1830, 0);
+		//Create User Object
+		User u1 = new User("Ayumi", "Tanaka", "ABC123", "123-456-789");
+		//Populate the list of BankAccounts
+		u1.addBankAccount(b1);
+		u1.addBankAccount(b2);
+		u1.addBankAccount(b3);
+		
+		printInformation(u1);
+	}
+
+}
+
